@@ -1776,18 +1776,18 @@ div.wpcf7 .ajax-loader:before {
 .post-list {
   padding: 3.125rem 0;
 }
-.post-list--suprimentos {
+.post-list--blog {
   background-image: url("/wp-content/themes/simplessystem/assets/images/post.jpg");
   background-position: cover;
   background-attachment: fixed;
 }
-.post-list--suprimentos .slick-slide {
+.post-list--blog .slick-slide {
   margin: 0.9375rem;
 }
-.post-list--suprimentos .post-list__item--empty {
+.post-list--blog .post-list__item--empty {
   display: none;
 }
-.post-list--suprimentos .post-list__title {
+.post-list--blog .post-list__title {
   color: #fff;
 }
 .post-list__container {
