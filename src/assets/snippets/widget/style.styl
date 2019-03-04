@@ -28,7 +28,7 @@
 
     &--products
         background: color-one
-        color: #fff
+        color: #ffffff
 
 @media (min-width: 992px)
     .widget 
@@ -47,3 +47,37 @@
             flex: 0 0 50%
             max-width: 50% !important
             object-fit: contain
+
+.solutions
+    &__container
+        opacity: 0 
+        transition: transition 
+        .textwidget
+            transform: translateX(-100%)
+            transition: transition 
+        img 
+            transform: translateX(100%)
+            transition: transition 
+        &--show 
+            opacity: 1
+            .textwidget
+                transform: translateX(0)
+            img 
+                transform: translateX(0)
+
+.products 
+    &__container
+        opacity: 0 
+        transition: transition 
+        .textwidget
+            transform: translateY(-100%)
+            transition: transition 
+        img 
+            transform: translateY(100%)
+            transition: transition 
+        &--show 
+            opacity: 1
+            .textwidget
+                transform: translateY(0)
+            img 
+                transform: translateY(0)

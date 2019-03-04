@@ -62,3 +62,43 @@
             &:hover 
                 z-index: 2
                 box-shadow: 0 0 10px rgba(0,0,0,.2)
+
+.codificadores
+    .product-list__title
+        opacity: 0 
+        transform: translateX(100%)
+        transition: transition 
+
+    .product-list__list
+        opacity: 0 
+        transform: translateY(100%)
+        transition: transition 
+
+    &__container--show
+        .product-list__title
+            opacity: 1
+            transform: translateX(0)
+
+        .product-list__list
+            opacity: 1
+            transform: translateY(0)
+
+.suprimentos
+    .product-list__title
+        opacity: 0 
+        transform: translateX(-100%)
+        transition: transition 
+
+    .product-list__list
+        opacity: 0 
+        transform: translateY(-100%)
+        transition: transition 
+
+    &__container--show
+        .product-list__title
+            opacity: 1
+            transform: translateX(0)
+
+        .product-list__list
+            opacity: 1
+            transform: translateY(0)

@@ -23,8 +23,8 @@ get_header();
 		zotWidget('products');
 	?>
 
-	<section class="product-list product-list--codificadores-industriais">
-		<div class="product-list__container">
+	<section id="codificadores" class="product-list product-list--codificadores-industriais codificadores">
+		<div class="product-list__container codificadores__container">
 			<h1 class="product-list__title">Codificadores Industriais</h1>
 			<?php 
 				$tax = array(
@@ -41,8 +41,8 @@ get_header();
 		</div>
 	</section>
 
-	<section class="product-list product-list--suprimentos">
-		<div class="product-list__container">
+	<section id="suprimentos" class="product-list product-list--suprimentos suprimentos">
+		<div class="product-list__container suprimentos__container">
 			<h1 class="product-list__title">Suprimentos</h1>
 			<?php 
 				$tax = array(
@@ -59,15 +59,15 @@ get_header();
 		</div>
 	</section>
 
-	<section class="contact">
+	<section id="contact" class="contact">
 		<div class="contact__container">
 			<h1 class="contact__title"><i class="fas fa-envelope"></i> Solicite o contato de um de nossos representante de vendas</h1>
 			<?php echo do_shortcode('[contact-form-7 id="82" title="Contato"]')?>
 		</div>
 	</section>
 
-	<section class="post-list post-list--suprimentos">
-		<div class="post-list__container">
+	<section id="blog" class="post-list post-list--blog blog">
+		<div class="post-list__container blog__container">
 			<h1 class="post-list__title"><i class="fas fa-rss"></i> Blog - Simples System</h1>
 			<?php 
 				zotPosts(4, 'desc', false ); ?>
@@ -76,8 +76,6 @@ get_header();
 				</div>
 		</div>
 	</section>
-
-	
 
 	</main>
 

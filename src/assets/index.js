@@ -37,3 +37,4 @@ import "Assets/modules/head";
  */
 // Home
 import "Assets/pages/home";
+import "Assets/pages/pages"; 

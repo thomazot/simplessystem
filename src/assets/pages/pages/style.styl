@@ -1,0 +1,78 @@
+.pages 
+    &__images, &__thumbs
+        opacity: 0 
+        visibility: hidden 
+        transition: transition 
+        &.slick-slider 
+            opacity: 1 
+            visibility: visible
+
+        img 
+            width: 100% 
+            height: 100% 
+            object-fit: contain
+
+    &__thumbs
+        left: -15px
+        width: calc(100% + 30px)
+        &-item 
+            padding: 15px 
+            cursor: pointer
+
+    &__mores
+        border-top: solid 1px color-one 
+        margin-top: 50px
+        padding-top: 50px
+
+        section 
+            + section
+                margin-top: 80px 
+
+    &__title  
+        font-size: 32px 
+        font-weight: bold 
+        color: color-one 
+        text-transform: uppercase
+
+    &__subtitle 
+        font-size: 18px 
+        font-weight: regular 
+        color: color-one
+
+    &__title-more 
+        font-size: 24px
+        font-weight: bold 
+        color: color-one 
+        padding-bottom: 20px 
+
+    &__descriptions 
+        padding: 20px 0 
+        font-size: 14px
+        font-weight: regular 
+        line-height: 1.5
+        color: color-two
+
+
+@media (min-width: 992px)
+    .pages 
+        &__content 
+            display: grid 
+            grid-template-areas: "gallery header" "gallery description"
+            grid-template-columns: 3fr 2fr
+            grid-template-rows: auto 1fr
+            margin: -(gutter / 2)
+
+        &__gallery 
+            grid-area: gallery 
+            min-width: 0 
+            padding: (gutter / 2)
+
+        &__header 
+            grid-area: header 
+            padding: (gutter / 2)
+
+        &__descriptions
+            grid-area: description
+            padding: (gutter / 2)
+
+        

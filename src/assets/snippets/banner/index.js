@@ -7,8 +7,4 @@ define(['jquery', 'slick-carousel'], ($) => {
         nextArrow: '<button class="slick-next" type="button"><i class="fas fa-chevron-right"></i></button>',
         prevArrow: '<button class="slick-prev" type="button"><i class="fas fa-chevron-left"></i></button>'
     });
-
-    
 }); 
-
-console.log('teste banner');

@@ -29,6 +29,7 @@
 		"optimize-css-assets-webpack-plugin": "^5.0.1",
 		"postcss-loader": "^3.0.0",
 		"postcss-object-fit-images": "^1.1.2",
+		"scrollmagic": "^2.0.6",
 		"slick-carousel": "^1.8.1",
 		"stickyfilljs": "^2.1.0",
 		"stylus": "^0.54.5",

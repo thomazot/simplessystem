@@ -77,3 +77,23 @@
             &:hover 
                 z-index: 2
                 box-shadow: 0 0 10px rgba(0,0,0,.2)
+
+.blog
+    .post-list__title
+        opacity: 0 
+        transform: translateX(100%)
+        transition: transition 
+
+    .post-list__list
+        opacity: 0 
+        transform: translateY(100%)
+        transition: transition 
+
+    &__container--show
+        .post-list__title
+            opacity: 1
+            transform: translateX(0)
+
+        .post-list__list
+            opacity: 1
+            transform: translateY(0)
