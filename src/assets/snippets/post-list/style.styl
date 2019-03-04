@@ -1,0 +1,79 @@
+.post-list 
+    padding: 50px 0
+
+    &--suprimentos
+        background-image: url('/wp-content/themes/simplessystem/assets/images/post.jpg')
+        background-position: cover 
+        background-attachment: fixed
+
+        .slick-slide
+            margin: (gutter / 2)
+
+        .post-list
+            &__item
+                &--empty 
+                    display: none
+            &__title 
+                color: #fff
+                
+    &__container 
+        display: container
+
+    &__footer 
+        text-align: center 
+        padding: 50px 0
+
+    &__title 
+        display: block 
+        padding: 0 0 50px 
+        font-size: 24px
+        font-weight: bold 
+        text-transform: uppercase 
+        color: color-one
+        text-align: center
+
+    &__list 
+        display: flex 
+        justify-content: space-between
+        align-items: flex-start 
+        flex-flow: row wrap
+        margin: - (gutter / 2)
+
+    &__item 
+        flex: 1 1 345px
+
+        &--empty 
+            padding: 0
+
+    &__border 
+        border-radius: 3px
+        padding: (gutter / 2)
+        background: #fff
+
+    &__name
+        display: block 
+        padding: 10px 0 
+        font-size: 14px 
+        font-weight: semi-bold 
+        color: color-one 
+        text-transform: uppercase
+
+    &__description 
+        font-size: 12px
+        font-weight: regular 
+        color: color-two
+
+@media (min-width: 992px)
+    .post-list 
+        &__title 
+            font-size: 32px
+            text-align: left 
+        &__item
+            position: relative 
+            z-index: 1
+            border-radius: 3px 
+            transition: transition 
+
+            &:hover 
+                z-index: 2
+                box-shadow: 0 0 10px rgba(0,0,0,.2)

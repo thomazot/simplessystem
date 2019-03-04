@@ -1,0 +1,55 @@
+
+.location 
+    position: relative 
+    width: 100% 
+    overflow: hidden
+    &__title 
+        position: absolute 
+        top: 0 
+        left: 50%  
+        z-index: 20
+        font-size: 32px
+        font-weight: bold 
+        text-align: center 
+        text-transform: uppercase 
+        color: #fff 
+        padding: 20px 0
+        transform: translateX(-50%)
+        transition: transition 
+
+        span
+            display: block 
+            font-size: 14px 
+            font-weight: regular 
+            text-transform: lowercase
+
+        .location__map 
+            padding: 10px 0
+            font-size: 24px
+            animation: updown 1s infinite
+
+    &__iframe
+        &:before 
+            content: ''
+            position: absolute 
+            top: 0 
+            left: 0
+            width: 100% 
+            height: 100% 
+            background: linear-gradient(to bottom, rgba(color-one, 1), rgba(255,255,255,.1))
+            cursor: pointer
+            transition: transition 
+
+        iframe 
+            display: block
+            width: 100% 
+            height: 600px 
+    &.on 
+        .location 
+            &__title 
+                max-height: 0 
+                overflow: hidden 
+                padding: 0
+            &__iframe:before
+                opacity: 0 
+                visibility: hidden

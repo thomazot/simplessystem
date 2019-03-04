@@ -1,0 +1,14 @@
+$input 
+    border: solid 1px color-two
+    border-radius: 3px 
+    padding: 10px 20px
+    font-size: 14px
+
+input 
+    @extends $input
+    
+    &.wpcf7-not-valid
+        border: solid 1px #f00
+
+textarea 
+    @extends $input 
