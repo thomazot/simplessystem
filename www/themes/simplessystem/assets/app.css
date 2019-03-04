@@ -672,7 +672,7 @@ div.wpcf7 .ajax-loader:before {
   max-width: 81.25rem;
   margin: 0 auto;
   padding: 0 0.9375rem;
-  padding: 3.125rem 0;
+  padding: 3.125rem 0.9375rem;
 }
 .pagination {
   display: -webkit-box;
@@ -3415,6 +3415,7 @@ div.wpcf7 .ajax-loader:before {
   font-size: 1.125rem;
   font-weight: 500;
   color: #0e507f;
+  padding-bottom: 20px;
 }
 .pages__title-more {
   font-size: 1.5rem;
@@ -3430,6 +3431,9 @@ div.wpcf7 .ajax-loader:before {
   color: #8c8b91;
 }
 @media (min-width: 992px) {
+  .pages__subtitle {
+    padding-bottom: 0;
+  }
   .pages__content {
     display: -ms-grid;
     display: grid;
