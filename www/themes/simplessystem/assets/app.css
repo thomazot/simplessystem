@@ -2335,8 +2335,6 @@ div.wpcf7 .ajax-loader:before {
       -ms-flex-flow: column nowrap;
           flex-flow: column nowrap;
   min-height: 100%;
-  width: 100%;
-  overflow: hidden;
 }
 .wrapper__container .header,
 .wrapper__container .footer {
@@ -2732,6 +2730,10 @@ div.wpcf7 .ajax-loader:before {
             transform: translateX(0);
     opacity: 1;
   }
+}
+.content__container {
+  width: 100%;
+  overflow: hidden;
 }
 
 @-webkit-keyframes loading {
