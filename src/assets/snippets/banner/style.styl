@@ -16,8 +16,8 @@
         position: relative 
         height: 175px
 
-        &--video
-            pointer-events: none
+        // &--video
+        //     pointer-events: none
 
     &__link 
         position: absolute 
@@ -27,6 +27,9 @@
         width: 100% 
         height: 100%
         background: rgba(color-one,.6)
+
+        .banner__item--video & 
+            display: none 
         
     &__content 
         position: absolute 
@@ -37,6 +40,10 @@
         text-align: center
         transform: translateY(-50%) translateX(-50%)
         color: #fff 
+
+        .banner__item--video & 
+            display: container 
+            text-align: left
         
     &__title 
         display: block
@@ -48,11 +55,19 @@
         transform: translateX(100%)
         opacity: 0
 
+        .banner__item--video & 
+            opacity: 0 
+            visibility:  hidden
+
     &__description 
         display: block
         font-size: 16px
         transform: translateX(-100%)
         opacity: 0
+
+        .banner__item--video & 
+            opacity: 0 
+            visibility:  hidden
 
     iframe 
         display: block
@@ -71,10 +86,18 @@
             animation: bannerTitle 1s 1 ease 
             transform: translateX(0)
             opacity: 1
+
         &__description
             animation: bannerDescription 1.5s 1 ease 
             transform: translateX(0)
             opacity: 1
+    
+
+    .banner__item--video .banner__title
+        animation: bannerTitleVideo 5s 1 ease 
+
+    .banner__item--video .banner__description
+        animation: bannerDescriptionVideo 5s 1 ease 
 
 @media (min-width: 992px)
     .banner 

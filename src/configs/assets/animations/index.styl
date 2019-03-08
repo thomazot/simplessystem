@@ -16,14 +16,48 @@
     from 
         transform: translateX(100%)
         opacity: 0
+        visibility: hidden
     to 
         transform: translateX(0)
         opacity: 1
+        visibility: visible
 
 @keyframes bannerDescription 
     from 
         transform: translateX(-100%)
         opacity: 0
+        visibility: hidden
     to 
         transform: translateX(0)
         opacity: 1
+        visibility: visible
+
+
+
+@keyframes bannerTitleVideo
+    0% 
+        transform: translateX(100%)
+        opacity: 0
+        visibility: hidden
+    20%, 95% 
+        transform: translateX(0)
+        opacity: 1
+        visibility: visible
+    100%
+        transform: translateX(0)
+        opacity: 0
+        visibility: hidden
+
+@keyframes bannerDescriptionVideo
+    0%
+        transform: translateX(-100%)
+        opacity: 0
+        visibility: hidden
+    20%, 95% 
+        transform: translateX(0)
+        opacity: 1
+        visibility: visible
+    100%
+        transform: translateX(0)
+        opacity: 0
+        visibility: hidden

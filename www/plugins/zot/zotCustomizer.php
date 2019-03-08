@@ -27,6 +27,41 @@ function zot_info_extra($customizer) {
         )
     );
 
+    /**
+     *	Whatsapp
+     */
+    $customizer->add_setting('whatsapp',
+        array(
+            'default' => ''
+        )
+    );
+
+    $customizer->add_control('control_whatsapp',
+        array(
+            'label' 	=> 'Whatsapp (somente numeros)',
+            'type'		=> 'text',
+            'section'	=> 'zot_customizer',
+            'settings'	=> 'whatsapp'
+        )
+    );
+    /**
+     *	Whatsapp
+     */
+    $customizer->add_setting('whatsapp_text',
+        array(
+            'default' => ''
+        )
+    );
+
+    $customizer->add_control('control_whatsapp_text',
+        array(
+            'label' 	=> 'Whatsapp Mensagem',
+            'type'		=> 'text',
+            'section'	=> 'zot_customizer',
+            'settings'	=> 'whatsapp_text'
+        )
+    );
+
 
     /**
      *	E-Mail

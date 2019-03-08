@@ -72,6 +72,13 @@ $assistencia = get_theme_mod('assistencia');
 	</div>
 </div>
 
+<?php if(get_theme_mod('whatsapp')): ?>
+<div id="whatsapp">
+	<a target="_blank" href="https://wa.me/<?php echo get_theme_mod('whatsapp'); ?>?text=<?php echo get_theme_mod('whatsapp_text'); ?>">
+		<i class="fab fa-whatsapp"></i>
+	</a>
+</div>
+<?php endif; ?>
 <?php wp_footer(); ?>
 <!-- BEGIN JIVOSITE CODE {literal} -->
 <script type='text/javascript'>

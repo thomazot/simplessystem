@@ -24,6 +24,7 @@ function zotBanner($local='full-banner')
                 $video          = get_field('video');
                 $type           = get_field('type');
                 $link           = get_field('link');
+
             ?>
 
             <div class="banner__item <?php echo $type == 'video' ? "banner__item--video" : "banner__item--image" ?>">
@@ -31,8 +32,11 @@ function zotBanner($local='full-banner')
                 <a class="banner__link" href="<?php echo $link; ?>"></a>
                 <?php endif; ?>
                 <?php if($type == 'video'): ?>
-                    <?php if ($video): ?>
-                        <iframe width="100%" height="315" src="<?php echo $video; ?>?autoplay=1&mute=1&autohide=1&showinfo=0&controls=0&disablekb=1&loop=1&modestbranding=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <?php if ($video): 
+                        preg_match('%(?:youtube(?:-nocookie)?\.com/(?:[^/]+/.+/|(?:v|e(?:mbed)?)/|.*[?&]v=)|youtu\.be/)([^"&?/ ]{11})%i', $video, $match);
+                        $youtube_id = $match[1];
+                        ?>
+                        <iframe width="100%" height="315" src="<?php echo $video; ?>?version=3&autoplay=1&mute=1&loop=1&playlist=<?php echo $youtube_id; ?>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     <?php endif; ?>
                 <?php else: ?>
                     <?php if ($banner): ?>
