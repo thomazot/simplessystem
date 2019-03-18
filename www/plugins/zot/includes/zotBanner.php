@@ -3,14 +3,20 @@ include_once "zotFunctions.php";
 
 function zotBanner($local='full-banner')
 {
+
     $query = new WP_Query(array(
         'numberposts'   => -1,
         'post_status'   => 'publish',
         'post_type'     => 'banner',
-        'order'         => 'desc',
-        'meta_key'      => 'local',
-        'meta_value'    => $local
+        'orderby'       => 'ordernumber',
+        'order'         => 'ASC',
+        'meta_query' => array(
+            'local' => array( 'key' => 'local', 'value' => $local ),
+            'ordernumber' => array( 'key' => 'order', 'value' => '', 'type' => 'NUMERIC', 'compare' => 'LIKE' )
+        )
     ));
+
+    // echo $query->request;
 
     if ($query->have_posts()):
         ?>

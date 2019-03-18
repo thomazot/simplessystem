@@ -1,13 +1,17 @@
 <?php
 include_once "zotFunctions.php";
 
-function zotProducts($limit= -1, $order='desc', $tax=false)
+function zotProducts($limit= -1, $order='ASC', $tax=false)
 {   
     $args = array(
         'posts_per_page' => $limit,
         'post_status' => 'publish',
         'post_type' => 'products',
-        'order' => $order
+        'order' => $order,
+        'orderby'       => 'ordernumber',
+        'meta_query' => array(
+            'ordernumber' => array( 'key' => 'order', 'value' => '', 'type' => 'NUMERIC', 'compare' => 'LIKE' )
+        )
     );
 
     if($tax) {
@@ -16,7 +20,10 @@ function zotProducts($limit= -1, $order='desc', $tax=false)
             'post_status' => 'publish',
             'post_type' => 'products',
             'order' => $order,
-            'tax_query' => array($tax)
+            'tax_query' => array($tax),
+            'meta_query' => array(
+                'ordernumber' => array( 'key' => 'order', 'value' => '', 'type' => 'NUMERIC', 'compare' => 'LIKE' )
+            )
         );
     }
 

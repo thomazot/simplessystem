@@ -1625,17 +1625,19 @@ div.wpcf7 .ajax-loader:before {
   left: 50%;
   z-index: 20;
   width: 100%;
-  text-align: center;
   -webkit-transform: translateY(-50%) translateX(-50%);
           transform: translateY(-50%) translateX(-50%);
   color: #fff;
-}
-.banner__item--video .banner__content {
   width: 100%;
   max-width: 81.25rem;
   margin: 0 auto;
   padding: 0 0.9375rem;
   text-align: left;
+}
+@media (min-width: 992px) {
+  .banner__content {
+    margin-top: -100px;
+  }
 }
 .banner__title {
   display: block;
@@ -2200,6 +2202,17 @@ div.wpcf7 .ajax-loader:before {
 .product-list {
   padding: 3.125rem 0;
 }
+.product-list__figure a {
+  display: block;
+  height: 18.75rem;
+}
+.product-list__figure a img {
+  -o-object-fit: cover;
+     font-family: "object-fit:cover";
+     object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
 .product-list--suprimentos {
   border-top: solid 1px #0e507f;
 }
@@ -2589,6 +2602,17 @@ div.wpcf7 .ajax-loader:before {
   font-size: 0.75rem;
   font-weight: 500;
   color: #8c8b91;
+}
+.post-list__link {
+  display: block;
+  height: 21.875rem;
+}
+.post-list__link img {
+  -o-object-fit: cover;
+     font-family: "object-fit:cover";
+     object-fit: cover;
+  width: 100%;
+  height: 100%;
 }
 @media (min-width: 992px) {
   .post-list__title {
