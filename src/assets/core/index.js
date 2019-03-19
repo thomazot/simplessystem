@@ -8,7 +8,7 @@ define(['scrollmagic', 'jquery'], (ScrollMagic, $) => {
     });
 
     const efects = ['solutions', 'products', 'codificadores', 'suprimentos', 'contact', 'blog'];
-    let index = 99999;
+    let index = 50;
     efects.forEach((scene) => {
         // create a scene
         const box = document.querySelector(`#${ scene }`);
