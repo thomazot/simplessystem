@@ -8,12 +8,12 @@ define(['scrollmagic', 'jquery'], (ScrollMagic, $) => {
     });
 
     const efects = ['solutions', 'products', 'codificadores', 'suprimentos', 'contact', 'blog'];
-    let index = 1;
+    let index = 99999;
     efects.forEach((scene) => {
         // create a scene
         const box = document.querySelector(`#${ scene }`);
         if(box) {
-            $(box).css({ 'position': 'relative', 'z-index': index++  });
+            $(box).css({ 'position': 'relative', 'z-index': index-1  });
             box.classList.add('scrollmagic');
 
             const sceneMagic = new ScrollMagic.Scene({
