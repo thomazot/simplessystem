@@ -13,7 +13,8 @@ define(['scrollmagic', 'jquery'], (ScrollMagic, $) => {
         // create a scene
         const box = document.querySelector(`#${ scene }`);
         if(box) {
-            $(box).css({ 'position': 'relative', 'z-index': index-1  });
+            $(box).css({ 'position': 'relative', 'z-index': index });
+            index = index-1;
             box.classList.add('scrollmagic');
 
             const sceneMagic = new ScrollMagic.Scene({
