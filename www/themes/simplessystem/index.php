@@ -34,7 +34,7 @@ get_header();
 						'terms'    => 'codificadores-industriais',
 					),
 				);
-				zotProducts(8, 'desc', $tax ); ?>
+				zotProducts(8, 'ASC', $tax ); ?>
 			<div class="product-list__footer">
 				<a class="button" href="/product_categories/codificadores-industriais">Veja Mais Codificadores Industriais</a>
 			</div>
@@ -52,7 +52,7 @@ get_header();
 						'terms'    => 'suprimentos',
 					),
 				);
-				zotProducts(8, 'desc', $tax ); ?>
+				zotProducts(8, 'ASC', $tax ); ?>
 				<div class="product-list__footer">
 					<a class="button" href="/product_categories/suprimentos">Veja Mais Suprimentos</a>
 				</div>
