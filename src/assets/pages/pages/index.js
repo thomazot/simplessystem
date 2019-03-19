@@ -13,6 +13,8 @@ define(['jquery', 'slick-carousel'], ($) => {
         slidesToShow: 5,
         slidesToScroll: 1,
         asNavFor: '.pages__images',
+        nextArrow: '<button class="slick-next" type="button"><i class="fas fa-chevron-right"></i></button>',
+        prevArrow: '<button class="slick-prev" type="button"><i class="fas fa-chevron-left"></i></button>',
         dots: false,
         focusOnSelect: true
     });    
