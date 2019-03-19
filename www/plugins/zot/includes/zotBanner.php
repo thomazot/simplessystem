@@ -12,7 +12,7 @@ function zotBanner($local='full-banner')
         'order'         => 'ASC',
         'meta_query' => array(
             'local' => array( 'key' => 'local', 'value' => $local ),
-            'ordernumber' => array( 'key' => 'order', 'value' => '', 'type' => 'NUMERIC', 'compare' => 'LIKE' )
+            'ordernumber' => array( 'key' => 'order', 'type' => 'NUMERIC')
         )
     ));
 

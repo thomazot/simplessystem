@@ -10,7 +10,7 @@ function zotProducts($limit= -1, $order='ASC', $tax=false)
         'order' => $order,
         'orderby'       => 'ordernumber',
         'meta_query' => array(
-            'ordernumber' => array( 'key' => 'order', 'value' => '', 'type' => 'NUMERIC', 'compare' => 'LIKE' )
+            'ordernumber' => array( 'key' => 'order', 'type' => 'NUMERIC')
         )
     );
 
@@ -22,7 +22,7 @@ function zotProducts($limit= -1, $order='ASC', $tax=false)
             'order' => $order,
             'tax_query' => array($tax),
             'meta_query' => array(
-                'ordernumber' => array( 'key' => 'order', 'value' => '', 'type' => 'NUMERIC', 'compare' => 'LIKE' )
+                'ordernumber' => array( 'key' => 'order', 'type' => 'NUMERIC')
             )
         );
     }
