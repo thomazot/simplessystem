@@ -20,6 +20,7 @@ function zotProducts($limit= -1, $order='ASC', $tax=false)
             'post_status' => 'publish',
             'post_type' => 'products',
             'order' => $order,
+            'orderby'       => 'ordernumber',
             'tax_query' => array($tax),
             'meta_query' => array(
                 'ordernumber' => array( 'key' => 'order', 'type' => 'NUMERIC')
